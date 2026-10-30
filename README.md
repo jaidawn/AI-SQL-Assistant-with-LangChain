@@ -263,28 +263,7 @@ Safety tests were performed for `DROP TABLE`, `DELETE`, `UPDATE`, multiple-state
 \- Business analytics and insight generation
 
 
-
-\## Future Improvements
-
-
-
-\- Build a Streamlit web interface for interactive querying.
-
-\- Add visualizations for sales trends and product performance.
-
-\- Strengthen SQL validation using a dedicated SQL parser.
-
-\- Add automated tests for query correctness and security edge cases.
-
-\- Improve handling of dates, missing values, and ambiguous questions.
-
-\- Add query logging and performance monitoring.
-
-
-
 \## Conclusion
-
-
 
 This project demonstrates how LLMs can simplify database analysis by translating natural-language questions into SQL. It combines database querying, Python data processing, LLM integration, and basic safety controls in a practical sales analytics use case.
 
