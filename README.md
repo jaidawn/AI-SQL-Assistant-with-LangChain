@@ -1,4 +1,4 @@
-\# AI SQL Assistant with LangChain
+1. AI SQL ASSISTANT WITH LANGCHAIN
 
 
 
@@ -10,7 +10,7 @@ The project enables users to explore sales performance, product categories, mont
 
 
 
-\# Project Overview
+2. PROJECT OVERVIEW
 
 
 
@@ -22,49 +22,49 @@ The assistant generates SQL from the user's question, validates the generated qu
 
 
 
-\# Key Features
+KEY FEATURES
 
 
 
-\- Natural Language to SQL: Converts questions written in English into SQL queries using an LLM.
+1. Natural Language to SQL: Converts questions written in English into SQL queries using an LLM.
 
-\- Automated Query Execution: Executes generated queries against a SQLite database.
+2. Automated Query Execution: Executes generated queries against a SQLite database.
 
-\- Sales Data Analysis: Analyzes order values, product categories, fulfilment methods, order statuses, and monthly sales.
+3. Sales Data Analysis: Analyzes order values, product categories, fulfilment methods, order statuses, and monthly sales.
 
-\- SQL Safety Checks: Restricts queries to `SELECT` statements, blocks multiple SQL statements and selected unsafe SQL patterns, and requires the approved amazon\_sales table.
+4. SQL Safety Checks: Restricts queries to `SELECT` statements, blocks multiple SQL statements and selected unsafe SQL patterns, and requires the approved amazon\_sales table.
 
-\- Read-Only Database Access: Uses SQLite read-only mode and enables query\_only.
+5. Read-Only Database Access: Uses SQLite read-only mode and enables query\_only.
 
-\- Result Size Control: Adds a default `LIMIT 100` when the generated query does not specify a limit.
+6. Result Size Control: Adds a default `LIMIT 100` when the generated query does not specify a limit.
 
-\- Error Handling: Handles validation errors, database errors, and empty query results.
+7. Error Handling: Handles validation errors, database errors, and empty query results.
 
-\- Interactive Analysis: Allows users to ask different business questions without manually writing each SQL query.
-
-
-
-\# Tech Stack
+8. Interactive Analysis: Allows users to ask different business questions without manually writing each SQL query.
 
 
 
-\- Programming Language: Python
-
-\- LLM Framework: LangChain
-
-\- Language Model Runtime: Ollama
-
-\- Database:SQLite
-
-\- Data Processing: Pandas
-
-\- Development Environment: Jupyter Notebook
-
-\- Query Language: SQL
+TECH STACK
 
 
 
-\# Dataset
+1. Programming Language: Python
+
+2. LLM Framework: LangChain
+
+3. Language Model Runtime: Ollama
+
+4. Database:SQLite
+
+5. Data Processing: Pandas
+
+6. Development Environment: Jupyter Notebook
+
+7. Query Language: SQL
+
+
+
+DATASET
 
 
 
@@ -96,33 +96,30 @@ The dataset covers records from March 31, 2022, to June 29, 2022.
 
 
 
-\# Example Business Questions
-
-
+ EXAMPLE BUSINESS QUESTIONS
 
 The assistant was tested with questions such as:
 
 
+1. Which 5 product categories have the highest total order value?
 
-\- Which 10 product categories have the highest total order value?
+2. What is the total order value for each month?
 
-\- What is the total order value for each month?
+3. Which product categories have the highest cancellation percentage?
 
-\- Which product categories have the highest cancellation percentage?
+4. What is the cancellation rate for each fulfilment method?
 
-\- What is the cancellation rate for each fulfilment method?
+5. How many records exist for each order status?
 
-\- How many records exist for each order status?
-
-\- Which states have the highest total recorded order value?
-
-
-
-\## Sample Results and Insights
+6. Which states have the highest total recorded order value?
 
 
 
-\### 1. Top Product Categories by Order Value
+SAMPLE RESULTS AND INSIGHTS
+
+
+
+1. Top Product Categories by Order Value
 
 
 
@@ -150,15 +147,10 @@ Insight: Set and kurta contributed the highest total order values among the prod
 
 
 
-\### 2. Cancellation Rate by Fulfilment Method
+2. Cancellation Rate by Fulfilment Method
 
 
-
-The cancellation rate was calculated as:
-
-
-
-`Cancellation Rate = Cancelled Records / Total Records × 100`
+The cancellation rate was calculated as: `Cancellation Rate = Cancelled Records / Total Records × 100`
 
 
 
@@ -176,8 +168,7 @@ Insight: Merchant-fulfilled records had a higher cancellation rate than Amazon-f
 
 
 
-\### 3. Monthly Order Value
-
+3. Monthly Order Value
 
 
 The assistant generated a monthly aggregation query using SQLite's `strftime()` function.
@@ -202,29 +193,24 @@ Insight: April recorded the highest total order value among the four months repr
 
 
 
-\## SQL Safety and Error Handling
+SQL SAFETY AND ERROR HANDLING
 
 
+1. Allows queries beginning with `SELECT`.
 
-The project includes several safeguards designed to reduce the risk of unsafe SQL execution.
+2. Rejects multiple SQL statements.
 
+3. Blocks SQL comments and selected unsafe keywords.
 
+4. Requires queries to reference `amazon\_sales`.
 
-\- Allows queries beginning with `SELECT`.
+5. Adds a default row limit when one is absent.
 
-\- Rejects multiple SQL statements.
+6. Opens SQLite in read-only mode.
 
-\- Blocks SQL comments and selected unsafe keywords.
+7. Enables SQLite's `query\_only` setting.
 
-\- Requires queries to reference `amazon\_sales`.
-
-\- Adds a default row limit when one is absent.
-
-\- Opens SQLite in read-only mode.
-
-\- Enables SQLite's `query\_only` setting.
-
-\- Handles invalid-table queries and queries returning no matching records.
+8. Handles invalid-table queries and queries returning no matching records.
 
 
 
@@ -232,38 +218,32 @@ Safety tests were performed for `DROP TABLE`, `DELETE`, `UPDATE`, multiple-state
 
 
 
-
-
-\*Adjust the filenames and directory structure to match the files actually included in your repository.\*
-
-
-
-\## Skills Demonstrated
+SKILLS DEMONSTRATED
 
 
 
-\- Python programming
+1. Python programming
 
-\- SQL querying and aggregation
+2. SQL querying and aggregation
 
-\- SQLite database integration
+3. SQLite database integration
 
-\- Pandas data handling
+4. Pandas data handling
 
-\- LangChain and LLM integration
+5. LangChain and LLM integration
 
-\- Natural-language-to-SQL workflows
+6. Natural-language-to-SQL workflows
 
-\- Prompt engineering
+7. Prompt engineering
 
-\- SQL validation and defensive programming
+8. SQL validation and defensive programming
 
-\- Error handling and debugging
+9. Error handling and debugging
 
-\- Business analytics and insight generation
+10. Business analytics and insight generation
 
 
-\## Conclusion
+CONCLUSION
 
 This project demonstrates how LLMs can simplify database analysis by translating natural-language questions into SQL. It combines database querying, Python data processing, LLM integration, and basic safety controls in a practical sales analytics use case.
 
